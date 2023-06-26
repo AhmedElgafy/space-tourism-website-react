@@ -2,7 +2,8 @@
   "nav": [
     {
       "logoImage": "./assets/shared/logo.svg",
-      "hamburgerImage": "./assets/shared/icon-hamburger.svg"
+      "hamburgerImage": "./assets/shared/icon-hamburger.svg",
+      "exitIcon": "./assets/shared/icon-close.svg"
     }
   ],
   "homePage": [

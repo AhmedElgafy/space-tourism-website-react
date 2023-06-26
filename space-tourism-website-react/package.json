@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite && npm tailwindcss -i ./src/input.css -o ./output.css --watch",
+    "dev": "vite --host && npm tailwindcss -i ./src/input.css -o ./output.css --watch",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
