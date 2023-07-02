@@ -17,8 +17,6 @@ function App() {
   // console.log(showNav);
   return (
     <>
-      {/* <Link to="/">home</Link> */}
-      {/* <ToggleNav imgSrc={srcData.nav[0].exitIcon} /> */}
       <div className="">
         <nav className="m-6 !mb-2  flex items-center justify-between">
           <img className="block " src={srcData.nav[0].logoImage} alt="" />
