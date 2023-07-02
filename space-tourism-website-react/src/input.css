@@ -1,4 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @tailwind base; */
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap");
+
+/* @tailwind components; */
+/* @tailwind utilities; */
+.title {
+  @apply font-['Bellefair'] font-light text-7xl text-[#ffffff];
+}
+.subTitle {
+  @apply font-BarlowCondensed text-[#D0D6F9];
+}
+.body {
+  @apply font-['Barlow'] text-[#D0D6F9] mb-10 mx-4;
+}
+.subTitleNums {
+  @apply text-[#616476] font-BarlowCondensed font-bold;
+}
+.centerContent {
+  @apply flex flex-col h-full justify-center text-center;
+}
+.line {
+  height: 1px;
+  background: #ffffff;
+}
+.onPlanet:hover:before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background: #ffffff;
+  width: 100%;
+  bottom: -5px;
+}
+.photoLine {
+  /* position: absolute; */
+
+  content: "";
+  display: block;
+  height: 1px;
+  background: #616476;
+  width: 90%;
+  bottom: 0px;
+}

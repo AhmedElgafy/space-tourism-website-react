@@ -1,4 +1,23 @@
 {
+  "backGroundImages": [
+    {
+      "dist": {
+        "mob": "./assets/destination/background-destination-mobile.jpg",
+        "tab": "./assets/destination/background-destination-tablet.jpg",
+        "desk": "./assets/destination/background-destination-desktop.jpg"
+      },
+      "crew": {
+        "mob": "./assets/crew/background-crew-mobile.jpg",
+        "tab": "./assets/crew/background-crew-tablet.jpg",
+        "desk": "./assets/crew/background-crew-desktop.jpg"
+      },
+      "tech": {
+        "mob": "./assets/technology/background-technology-mobile.jpg",
+        "tab": "./assets/technology/background-technology-tablet.jpg",
+        "disk": "./assets/technology/background-technology-desktop.jpg"
+      }
+    }
+  ],
   "nav": [
     {
       "logoImage": "./assets/shared/logo.svg",
@@ -9,6 +28,8 @@
   "homePage": [
     {
       "bgImageMob": "./assets/home/background-home-mobile.jpg",
+      "bgImageDesk": "./assets/home/background-home-desktop.jpg",
+      "bgImageTab": "./assets/home/background-home-tablet.jpg",
       "iconClose": "./assets/shared/icon-icon-close.svg",
       "title": "SPACE",
 
