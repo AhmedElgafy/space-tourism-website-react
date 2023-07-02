@@ -653,10 +653,6 @@ video {
   margin-left: 2.5rem;
 }
 
-.ml-11 {
-  margin-left: 2.75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -1239,28 +1235,12 @@ video {
     margin-left: 2.5rem;
   }
 
-  .md\:ml-\[15\%\] {
-    margin-left: 15%;
-  }
-
-  .md\:mt-\[50\%\] {
-    margin-top: 50%;
-  }
-
-  .md\:mt-\[30\%\] {
-    margin-top: 30%;
-  }
-
-  .md\:mt-\[10\%\] {
-    margin-top: 10%;
-  }
-
-  .md\:mt-\[9\%\] {
-    margin-top: 9%;
-  }
-
   .md\:ml-11 {
     margin-left: 2.75rem;
+  }
+
+  .md\:ml-\[15\%\] {
+    margin-left: 15%;
   }
 
   .md\:grid {

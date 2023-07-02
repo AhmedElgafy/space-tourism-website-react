@@ -1,4 +1,4 @@
-import { JSXElementConstructor, useState } from "react";
+import { useState } from "react";
 import srcData from "../../public/data.json";
 
 export default function Crew() {
