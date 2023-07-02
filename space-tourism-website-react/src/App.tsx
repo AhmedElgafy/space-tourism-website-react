@@ -1,6 +1,6 @@
-import { useState, createContext } from "react";
+import { useState } from "react";
 import srcData from "../public/data.json";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Routes/HomePage";
 import Destinations from "./Routes/Destinations";
 import Crew from "./Routes/Crew";

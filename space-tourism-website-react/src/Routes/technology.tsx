@@ -1,5 +1,5 @@
 // import { useActionData, } from "react-router-dom";
-import { JSXElementConstructor, useState } from "react";
+import { useState } from "react";
 import srcData from "../../public/data.json";
 export default function Technology() {
   const [techIndex, setTechIndex] = useState(0);
