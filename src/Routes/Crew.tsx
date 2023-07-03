@@ -7,23 +7,30 @@ export default function Crew() {
   // document.body.style.background = `url(${srcData.backGroundImages[0].crew.mob})  no-repeat `;
 
   if (screen.width < 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].crew.mob})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].crew.mob})  no-repeat fixed`;
+    document.body.style.backgroundSize = "cover";
   }
   if (screen.width < 700 && screen.width > 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].crew.tab})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].crew.tab})  no-repeat fixed`;
+    document.body.style.backgroundSize = "cover";
   }
   if (screen.width > 770) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].crew.desk})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].crew.desk})  no-repeat fixed `;
+    document.body.style.backgroundSize = "cover";
   }
   window.addEventListener("resize", () => {
     if (screen.width < 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].crew.mob})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].crew.mob})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
     if (screen.width < 700 && screen.width > 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].crew.tab})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].crew.tab})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
-    if (screen.width > 770) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].crew.desk})  no-repeat `;
+    if (screen.width > 700) {
+      document.body.style.background = `url(${srcData.backGroundImages[0].crew.desk})  no-repeat fixed `;
+
+      document.body.style.backgroundSize = "cover";
     }
   });
 
@@ -49,15 +56,15 @@ export default function Crew() {
   };
   return (
     <>
-      <div className=" centerContent sm:h-screen sm:!grid md:grid-cols-2">
+      <div className=" centerContent sm:h-screen md:!h-[80vh] sm:!grid md:grid-cols-2">
         <div className="md:self-end">
           <h5 className="subTitle sm:!text-left m-5 tracking-[.2em] self-center align-middle md:ml-[15%]">
             <span className="subTitleNums  ">02</span>&nbsp; MEET YOUR CREW
           </h5>
         </div>
-        <div className="relative row-start-4 md:absolute md:right-0 md:bottom-0  md:row-start-1 md:col-start-2 md:row-end-4  ">
+        <div className="relative row-start-4  md:absolute md:right-0 md:bottom-0  md:row-start-1 md:col-start-2 md:row-end-4  ">
           <img
-            className="w-[175px] md:w-[70%] block mx-auto relative  z-[-1] "
+            className="w-[175px] md:w-[70%] md:h-[80vh] md:w-auto block mx-auto relative  z-[-1]  "
             src={srcData.crew[crewIndex].images.png}
             alt=""
           />
@@ -68,10 +75,10 @@ export default function Crew() {
         </div>
         <div className="space-y-3 mt-4 md:ml-[15%] md:self-center md:row-start-2">
           <div className="md:!text-left text-center">
-            <h3 className="text-white opacity-50  font-[Bellefair]">
+            <h3 className="text-white opacity-50 md:text-lg font-[Bellefair]">
               {srcData.crew[crewIndex].role.toUpperCase()}
             </h3>
-            <h1 className="text-white text-2xl   font-[Bellefair]">
+            <h1 className="text-white text-2xl  md:text-3xl font-[Bellefair]">
               {srcData.crew[crewIndex].name.toUpperCase()}
             </h1>
           </div>
