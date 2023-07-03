@@ -7,23 +7,29 @@ export default function Destinations() {
   const planets: string[] = ["MOON", "MARS", "EUROPA", "TITAN"];
   // document.body.style.background = `url(${srcData.backGroundImages[0].dist.mob})  no-repeat `;
   if (screen.width < 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].dist.mob})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].dist.mob})  no-repeat fixed`;
+    document.body.style.backgroundSize = "cover";
   }
   if (screen.width < 700 && screen.width > 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].dist.tab})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].dist.tab})  no-repeat fixed`;
+    document.body.style.backgroundSize = "cover";
   }
-  if (screen.width > 770) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].dist.desk})  no-repeat `;
+  if (screen.width > 700) {
+    document.body.style.background = `url(${srcData.backGroundImages[0].dist.desk})  no-repeat fixed `;
+    document.body.style.backgroundSize = "cover";
   }
   window.addEventListener("resize", () => {
     if (screen.width < 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].dist.mob})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].dist.mob})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
     if (screen.width < 700 && screen.width > 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].dist.tab})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].dist.tab})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
     if (screen.width > 770) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].dist.desk})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].dist.desk})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
   });
   const getPlanet = (e: string): void => {
@@ -44,7 +50,7 @@ export default function Destinations() {
       list.push(
         <p
           key={ele}
-          className={`body ${textColor}   !m-2 cursor-pointer onPlanet relative hover:text-[#ffffff]`}
+          className={`body ${textColor}   !m-2 cursor-pointer onPlanet relative md:text-xl hover:text-[#ffffff]`}
           onClick={() => {
             getPlanet(ele);
             setActivePlanetIndex(planets.indexOf(ele));
@@ -58,9 +64,9 @@ export default function Destinations() {
   };
   return (
     <>
-      <div className=" centerContent !h-screen space-y-6 !justify-start md:grid grid-cols-2 items-center">
+      <div className=" centerContent !h-[80vh] space-y-6 !justify-start md:grid grid-cols-2 items-center">
         <div className="">
-          <h5 className="subTitle m-5 tracking-[.2em] sm:text-left">
+          <h5 className="subTitle m-5 md:!ml-32 tracking-[.2em] sm:text-left md:text-xl">
             <span className="subTitleNums">01</span>&nbsp; PICK YOUR DESTINATION
           </h5>
           <img
@@ -73,22 +79,24 @@ export default function Destinations() {
           <div className="flex gap-0 justify-center md:justify-start">
             <PlantsName></PlantsName>
           </div>
-          <h1 className="title !text-6xl">
+          <h1 className="title !text-6xl md:!text-8xl">
             {srcData.destinations[planetIndex].name.toUpperCase()}
           </h1>
           <p className="body !mb-3 md:ml-0 md:me-24">
             {srcData.destinations[planetIndex].description}
           </p>
           <div className="line mb-1 w-60 justify-self-center mx-auto md:mx-0 md:w-[80%] md:justify-self-start"></div>
-          <div className="sm:grid grid-flow-col col-start-2 space-y-3 items-center">
+          <div className="sm:grid grid-flow-col col-start-2 space-y-3 items-center ">
             <div>
-              <p className=" body !mb-[.1rem] text-xs ">AVG. DISTANCE</p>
+              <p className=" body !mb-[.1rem] text-xs md:m-0">AVG. DISTANCE</p>
               <h1 className="text-4xl text-white  !font-['Bellefair']">
                 {srcData.destinations[planetIndex].distance}
               </h1>
             </div>
             <div>
-              <p className=" body !mb-[.1rem] text-xs">EST. TRAVEL TIME</p>
+              <p className=" body !mb-[.1rem] text-xs md:m-0">
+                EST. TRAVEL TIME
+              </p>
               <h1 className="text-4xl text-white !font-['Bellefair'] ">
                 {srcData.destinations[planetIndex].travel}
               </h1>

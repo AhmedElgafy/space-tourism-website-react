@@ -7,24 +7,30 @@ export default function Technology() {
   const [screenRes, setScreenRes] = useState(screen.width);
   // document.body.style.background = `url(${srcData.backGroundImages[0].tech.mob})  no-repeat `;
   if (screen.width < 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].tech.mob})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].tech.mob})  no-repeat fixed `;
+    document.body.style.backgroundSize = "cover";
   }
   if (screen.width < 700 && screen.width > 375) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].tech.tab})  no-repeat `;
+    document.body.style.background = `url(${srcData.backGroundImages[0].tech.tab})  no-repeat fixed`;
+    document.body.style.backgroundSize = "cover";
   }
-  if (screen.width > 770) {
-    document.body.style.background = `url(${srcData.backGroundImages[0].tech.disk})  no-repeat `;
+  if (screen.width > 700) {
+    document.body.style.background = `url(${srcData.backGroundImages[0].tech.disk})  no-repeat  fixed `;
+    document.body.style.backgroundSize = "cover";
   }
   window.addEventListener("resize", () => {
     setScreenRes(screen.width);
     if (screen.width < 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].tech.mob})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].tech.mob})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
     if (screen.width < 700 && screen.width > 375) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].tech.tab})  no-repeat `;
+      document.body.style.background = `url(${srcData.backGroundImages[0].tech.tab})  no-repeat fixed`;
+      document.body.style.backgroundSize = "cover";
     }
-    if (screen.width > 770) {
-      document.body.style.background = `url(${srcData.backGroundImages[0].tech.disk})  no-repeat `;
+    if (screen.width > 700) {
+      document.body.style.background = `url(${srcData.backGroundImages[0].tech.disk})  no-repeat fixed `;
+      document.body.style.backgroundSize = "cover";
     }
   });
   const Indexs = (): JSX.Element[] => {
@@ -44,7 +50,7 @@ export default function Technology() {
           key={i}
           className={`${numColor} border-solid flex items-center  ${backGround}
           justify-center hover:bg-white cursor-pointer hover:text-black
-           border-white border-[1px] border-opacity-50 rounded-full w-10 h-10 text-center`}
+           border-white border-[1px] border-opacity-50 rounded-full w-10 h-10 md:w-14 md:h-14 text-center`}
           onClick={() => {
             setTechIndex(i);
             setActiveChildIndex(i);
@@ -59,38 +65,40 @@ export default function Technology() {
   };
   return (
     <>
-      <div className="col-span-5">
-        <h5 className="subTitle m-14 sm:text-left   tracking-[.2em]">
-          <span className="subTitleNums  ">03</span>&nbsp; SPACE LAUNCH 101
-        </h5>
-      </div>
-      <div className=" centerContent md:grid md:grid-cols-9 !h-full ">
-        <div className="col-start-8 col-end-11  row-start-1 row-end-3  ">
-          <img
-            className="md:h-full !block "
-            src={
-              screenRes < 770
-                ? srcData.technology[techIndex].images.landscape
-                : srcData.technology[techIndex].images.portrait
-            }
-            alt=""
-          />
+      <div className=" ">
+        <div className="col-span-5">
+          <h5 className="subTitle m-14 md:ml-[9%] sm:text-left   tracking-[.2em]">
+            <span className="subTitleNums  ">03</span>&nbsp; SPACE LAUNCH 101
+          </h5>
         </div>
-        <div className="flex justify-center gap-5 mt-5 md:flex-col md:col-start-1 md:justify-self-end">
-          {<Indexs></Indexs>}
-        </div>
-        <div className="space-y-3 mt-4 col-span-5 md:ml-10">
-          <div className=" text-center md:text-left">
-            <h3 className="text-[#D0D6F9]    font-BarlowCondensed tracking-[.2em]">
-              {"the terminology ...".toUpperCase()}
-            </h3>
-            <h1 className="text-white text-2xl   font-[Bellefair] ">
-              {srcData.technology[techIndex].name.toUpperCase()}
-            </h1>
+        <div className=" centerContent md:grid md:grid-cols-9 md:align-top ">
+          <div className="col-start-8 col-end-11  row-start-1 row-end-3  ">
+            <img
+              className="md:h-full !block "
+              src={
+                screenRes < 770
+                  ? srcData.technology[techIndex].images.landscape
+                  : srcData.technology[techIndex].images.portrait
+              }
+              alt=""
+            />
           </div>
-          <p className="body !mx-4 md:!text-left md:!ml-0 text-sm">
-            {srcData.technology[techIndex].description}
-          </p>
+          <div className="flex justify-center gap-5 mt-5 md:flex-col md:col-start-1 md:justify-self-end">
+            {<Indexs></Indexs>}
+          </div>
+          <div className="space-y-3 mt-4 col-span-5 md:ml-10 md:self-center">
+            <div className=" text-center md:text-left">
+              <h3 className="text-[#D0D6F9]    font-BarlowCondensed tracking-[.2em]">
+                {"the terminology ...".toUpperCase()}
+              </h3>
+              <h1 className="text-white text-2xl   font-[Bellefair] ">
+                {srcData.technology[techIndex].name.toUpperCase()}
+              </h1>
+            </div>
+            <p className="body !mx-4 md:!text-left md:!ml-0 text-sm md:w-[70%]">
+              {srcData.technology[techIndex].description}
+            </p>
+          </div>
         </div>
       </div>
     </>

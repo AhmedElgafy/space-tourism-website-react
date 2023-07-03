@@ -8,14 +8,15 @@
 
 /* @tailwind components; */
 /* @tailwind utilities; */
+
 .title {
   @apply font-['Bellefair'] font-light text-7xl text-[#ffffff];
 }
 .subTitle {
-  @apply font-BarlowCondensed text-[#D0D6F9];
+  @apply font-BarlowCondensed text-[#D0D6F9] md:text-xl;
 }
 .body {
-  @apply font-['Barlow'] text-[#D0D6F9] mb-10 mx-4;
+  @apply font-['Barlow'] text-[#D0D6F9] mb-10 mx-4 md:text-lg;
 }
 .subTitleNums {
   @apply text-[#616476] font-BarlowCondensed font-bold;
@@ -44,4 +45,23 @@
   background: #616476;
   width: 90%;
   bottom: 0px;
+}
+@keyframes exploreAnimation {
+  0% {
+    height: 100%;
+    width: 100%;
+  }
+  50% {
+    height: 150%;
+    width: 150%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+.exploreBtn:hover::before {
+  animation-name: exploreAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
